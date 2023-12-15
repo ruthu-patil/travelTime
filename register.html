@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <nav class="top-menu">
+            <div class="brand">
+                <img src="./assets/img/logo.png" alt="Brand Logo">
+                <span>TravelTime</span>
+            </div>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#book-now">Book</a></li>
+                <li class="dropdown">
+                    <a href="#packages-section">Packages</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#packages-section">Tokyo</a></li>
+                        <li><a href="#packages-section">India</a></li>
+                        <li><a href="#packages-section">Paris</a></li>
+                        <li><a href="#packages-section">Dubai</a></li>
+                        <li><a href="#packages-section">More</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about-us">About</a></li>
+            </ul>
+            <div class="user-menu">
+                <button id="loginBtn" onclick="navigateToNextPage('login');">Login</button>
+                <button id="registerBtn" onclick="navigateToNextPage('register');">Register</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="brand-register">
+            <img src="./assets/img/logo.png" alt="Brand Logo">
+        </div>
+        <h2>Register at Travel Time</h2>
+        <form id="registerForm" onsubmit="return validateForm()">
+            <input type="text" id="fullname" placeholder="Full Name" required>
+            <input type="text" id="contact" placeholder="Contact Num" required>
+            <input type="date" id="dob" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html"><b>Login here</b></a></p>
+    </div>
+    <script src="./js/register.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
