@@ -1,214 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png" />
     <title>Travel Time</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="top-menu">
-            <div class="brand">
-                <img src="./assets/img/logo.png" alt="Brand Logo">
-                <span>TravelTime</span>
-            </div>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#book-now">Book</a></li>
-                <li class="dropdown">
-                    <a href="#packages-sectionn">Packages</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#packages-section">Turkey</a></li>
-                        <li><a href="#packages-section">India</a></li>
-                        <li><a href="#packages-section">France</a></li>
-                        <li><a href="#packages-section">Germany</a></li>
-                    </ul>
-                </li>
-                <li><a href="#service_section">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about-us">About</a></li>
+      <nav class="top-menu">
+        <div class="brand">
+          <img src="./assets/img/logo.png" alt="Brand Logo" />
+          <span>TravelTime</span>
+        </div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#book-now">Book</a></li>
+          <li class="dropdown">
+            <a href="#packages-sectionn">Packages</a>
+            <ul class="dropdown-content">
+              <li><a href="#packages-section">Turkey</a></li>
+              <li><a href="#packages-section">India</a></li>
+              <li><a href="#packages-section">France</a></li>
+              <li><a href="#packages-section">Germany</a></li>
             </ul>
-            <div class="user-menu">
-                <button id="loginBtn" onclick="navigateToNextPage('login');">Login</button>
-                <button id="registerBtn" onclick="navigateToNextPage('register');">Register</button>
-            </div>
-        </nav>
+          </li>
+          <li><a href="#service_section">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about-us">About</a></li>
+        </ul>
+        <div class="user-menu">
+          <button id="loginBtn" onclick="navigateToNextPage('login');">
+            Login
+          </button>
+          <button id="registerBtn" onclick="navigateToNextPage('register');">
+            Register
+          </button>
+        </div>
+      </nav>
     </header>
     <section class="welcome-section">
-        <img src="./assets/img/image.jpg" alt="Background Image">
-        <div class="welcome-content">
-            <h1>Welcome to Travel Time</h1>
-            <h2 id="placeName">Visit Placename</h2>
-            <a href="#book-now"><button id="bookNowBtn">Book Now</button></a>
-        </div>
+      <img src="./assets/img/image.jpg" alt="Background Image" />
+      <div class="welcome-content">
+        <h1>Welcome to Travel Time</h1>
+        <h2 id="placeName">Visit Placename</h2>
+        <a href="#book-now"><button id="bookNowBtn">Book Now</button></a>
+      </div>
     </section>
 
     <div class="row" id="book-now">
-        <div class="half-width">
-            <img src="./assets/img/section_two.jpg" alt="Brand Image">
-        </div>
-        <div class="half-width">
-            <form id="bookingForm">
-                <h2>How about a vacation?</h2>
-                <p>Who doesnt want to go for a vaccation fill the form fast for interesting packages.</p>
-                <div class="form-group">
-                    <label for="whereTo" class="label">Where to:</label>
-                    <select id="whereTo" name="whereTo" class="input">
-                        <option value="turkey">Turkey</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Usa">USA</option>
-                        <option value="paris">Paris</option>
-                        <option value="newYork">New York</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="numberOfPersons" class="label">How Many Persons:</label>
-                    <input type="number" id="numberOfPersons" name="numberOfPersons" min="1" class="input"
-                        placeholder="Enter number of persons">
-                </div>
-                <div class="form-group">
-                    <label for="startDate" class="label">Start Date:</label>
-                    <input type="date" id="startDate" name="startDate" min="2023-01-01" class="input"
-                        placeholder="Select start date">
-                </div>
-                <div class="form-group">
-                    <label for="endDate" class="label">End Date:</label>
-                    <input type="date" id="endDate" name="endDate" min="2023-01-01" class="input"
-                        placeholder="Select end date">
-                </div>
-                <div class="form-group">
-                    <label for="description" class="label">Description:</label>
-                    <textarea id="description" name="description" minlength="50" maxlength="500" class="input"
-                        placeholder="Enter a description"></textarea>
-                </div>
-                <button type="button" onclick="bookNow()" class="submit-button">Book Now</button>
-            </form>
-        </div>
+      <div class="half-width">
+        <img src="./assets/img/section_two.jpg" alt="Brand Image" />
+      </div>
+      <div class="half-width">
+        <form id="bookingForm">
+          <h2>How about a vacation?</h2>
+          <p>
+            Who doesnt want to go for a vaccation fill the form fast for
+            interesting packages.
+          </p>
+          <div class="form-group">
+            <label for="whereTo" class="label">Where to:</label>
+            <select id="whereTo" name="whereTo" class="input">
+              <option value="turkey">Turkey</option>
+              <option value="Japan">Japan</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Usa">USA</option>
+              <option value="paris">Paris</option>
+              <option value="newYork">New York</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="numberOfPersons" class="label">How Many Persons:</label>
+            <input
+              type="number"
+              id="numberOfPersons"
+              name="numberOfPersons"
+              min="1"
+              class="input"
+              placeholder="Enter number of persons"
+            />
+          </div>
+          <div class="form-group">
+            <label for="startDate" class="label">Start Date:</label>
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              min="2023-01-01"
+              class="input"
+              placeholder="Select start date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="endDate" class="label">End Date:</label>
+            <input
+              type="date"
+              id="endDate"
+              name="endDate"
+              min="2023-01-01"
+              class="input"
+              placeholder="Select end date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description" class="label">Description:</label>
+            <textarea
+              id="description"
+              name="description"
+              minlength="50"
+              maxlength="500"
+              class="input"
+              placeholder="Enter a description"
+            ></textarea>
+          </div>
+          <button type="button" onclick="bookNow()" class="submit-button">
+            Book Now
+          </button>
+        </form>
+      </div>
     </div>
-    <hr>
+    <hr />
     <!-- Section packages -->
-    <h2 id="packages-sectionn" style="font-size: 36px; margin-top: 30px; text-align: center;"><u>Our Famous Packages</u>
+    <h2
+      id="packages-sectionn"
+      style="font-size: 36px; margin-top: 30px; text-align: center"
+    >
+      <u>Our Famous Packages</u>
     </h2>
-    <p style=" padding-left: 2%; padding-right: 2%; text-align: justify;">
-        "Travel Time" offers an unparalleled tour package designed to deliver seamless and
-        immersive travel experiences across continents. Our meticulously organized tours are a testament to our
-        commitment to excellence in every aspect of your journey. <br><br>
+    <p style="padding-left: 2%; padding-right: 2%; text-align: justify">
+      "Travel Time" offers an unparalleled tour package designed to deliver
+      seamless and immersive travel experiences across continents. Our
+      meticulously organized tours are a testament to our commitment to
+      excellence in every aspect of your journey. <br /><br />
 
-        From the snow-capped mountains of Europe to the vibrant cities of Asia, and from the wild savannas of Africa to
-        the stunning landscapes of South America, our services span across all continents. We pride ourselves on our
-        expertly curated itineraries, accommodating diverse interests and preferences. <br><br>
+      From the snow-capped mountains of Europe to the vibrant cities of Asia,
+      and from the wild savannas of Africa to the stunning landscapes of South
+      America, our services span across all continents. We pride ourselves on
+      our expertly curated itineraries, accommodating diverse interests and
+      preferences. <br /><br />
 
-        Our commitment to excellence is reflected in the precision with which we organize every aspect of your travel -
-        from accommodation to transportation, sightseeing to leisure activities. We prioritize customer satisfaction,
-        ensuring that every traveler feels personally cared for and catered to throughout their journey.
-        <br><br>
-        Travel Time stands out for its dedication to creating unforgettable moments, offering authentic cultural
-        experiences, and fostering connections with the world's diverse heritage. With a global network of partners and
-        a team of experienced professionals, we ensure that your travel experience is not just a trip but a remarkable
-        adventure filled with memories that last a lifetime.
+      Our commitment to excellence is reflected in the precision with which we
+      organize every aspect of your travel - from accommodation to
+      transportation, sightseeing to leisure activities. We prioritize customer
+      satisfaction, ensuring that every traveler feels personally cared for and
+      catered to throughout their journey.
+      <br /><br />
+      Travel Time stands out for its dedication to creating unforgettable
+      moments, offering authentic cultural experiences, and fostering
+      connections with the world's diverse heritage. With a global network of
+      partners and a team of experienced professionals, we ensure that your
+      travel experience is not just a trip but a remarkable adventure filled
+      with memories that last a lifetime.
     </p>
 
     <div class="package-section" id="packages-section">
-        <!-- Add packages dynamically using JavaScript -->
+      <!-- Add packages dynamically using JavaScript -->
     </div>
-    <hr>
+    <hr />
     <!-- Section services -->
-    <h2 id="service_section" style="font-size: 36px; margin-top: 30px; text-align: center;"><u>Our Services</u></h2>
-    <p style=" padding-left: 2%; padding-right: 2%; text-align: justify;">
-        As a premier travel agency, we pride ourselves on a range of comprehensive services designed to enhance your
-        travel experience. Our offerings include affordable hotel accommodations that guarantee comfortable stays at
-        budget-friendly prices. Indulge in delightful culinary journeys with our diverse selection of local and
-        international cuisines under our Food & Drinks service. <br><br>
+    <h2
+      id="service_section"
+      style="font-size: 36px; margin-top: 30px; text-align: center"
+    >
+      <u>Our Services</u>
+    </h2>
+    <p style="padding-left: 2%; padding-right: 2%; text-align: justify">
+      As a premier travel agency, we pride ourselves on a range of comprehensive
+      services designed to enhance your travel experience. Our offerings include
+      affordable hotel accommodations that guarantee comfortable stays at
+      budget-friendly prices. Indulge in delightful culinary journeys with our
+      diverse selection of local and international cuisines under our Food &
+      Drinks service. <br /><br />
 
-        Safety is our utmost priority, and our expert guides ensure a secure and enjoyable travel experience through our
-        Safety Guide service. Forget transportation hassles, as we take care of all your travel needs, arranging
-        seamless transport wherever your journey leads, courtesy of our Transport service. <br><br>
+      Safety is our utmost priority, and our expert guides ensure a secure and
+      enjoyable travel experience through our Safety Guide service. Forget
+      transportation hassles, as we take care of all your travel needs,
+      arranging seamless transport wherever your journey leads, courtesy of our
+      Transport service. <br /><br />
 
-        Worried about unforeseen circumstances? Relax with our Travel Insurance service, ensuring peace of mind
-        throughout your trip. Additionally, we offer flexibility with our No Cancellation Charges policy, allowing you
-        to cancel anytime without worries, and we'll refund you accordingly. Travel confidently with us, where
-        convenience, safety, and comfort are our top priorities.
+      Worried about unforeseen circumstances? Relax with our Travel Insurance
+      service, ensuring peace of mind throughout your trip. Additionally, we
+      offer flexibility with our No Cancellation Charges policy, allowing you to
+      cancel anytime without worries, and we'll refund you accordingly. Travel
+      confidently with us, where convenience, safety, and comfort are our top
+      priorities.
     </p>
     <div class="services-slider">
-        <div class="slider-container">
-            <div class="slides"></div>
-
-        </div>
+      <div class="slider-container">
+        <div class="slides"></div>
+      </div>
     </div>
-    <hr>
+    <hr />
     <!-- Gallery Section -->
     <div class="gallery-section" id="gallery">
-        <h2 id="service_section" style="font-size: 36px; margin-top: 30px; text-align: center;"><u>Our Gallery</u></h2>
-        <div class="gallery">
-            <img src="./assets/img/about1.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about2.jpg" alt="Image 2" class="gallery-image">
-            <img src="./assets/img/about3.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about4.jpg" alt="Image 2" class="gallery-image">
-            <img src="./assets/img/about5.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about6.jpg" alt="Image 2" class="gallery-image">
-            <img src="./assets/img/about7.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about8.jpg" alt="Image 2" class="gallery-image">
-            <!-- Add more images as needed -->
-        </div>
+      <h2
+        id="service_section"
+        style="font-size: 36px; margin-top: 30px; text-align: center"
+      >
+        <u>Our Gallery</u>
+      </h2>
+      <div class="gallery">
+        <img
+          src="./assets/img/about1.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about2.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about3.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about4.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about5.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about6.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about7.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about8.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <!-- Add more images as needed -->
+      </div>
     </div>
 
     <!-- About Us Section -->
     <div class="about-section" id="about-us">
-        <div class="row">
-            <div class="about-us-image">
-                <img src="./assets/img/logo.png" alt="travel time">
-            </div>
-            <div class="half-width">
-                <div class="company-info">
-                    <!-- Company information, establishment, details -->
-                    <h2>About Travel Time </h2>
-                    <p>"Travel Time, where every journey unveils a story, was founded in the spirit of exploring the
-                        world and creating timeless memories." <b>Ruthu M Patil</b> , the visionary behind Travel Time, once
-                        remarked, <i>"Travel opens the doors to endless possibilities."</i>  Established in 2005, Travel Time
-                        has been a beacon for wanderlust enthusiasts, curating bespoke travel experiences that transcend
-                        ordinary excursions. Our passion for travel is woven into every itinerary we craft, ensuring
-                        that each journey is a tapestry of unique adventures and cultural immersions. 
-                        <br><br>
-                        As a premier
-                        travel company specializing in tours and exploration, we take pride in our dedication to
-                        delivering exceptional service, personalized attention, and seamless travel experiences. With a
-                        team of seasoned professionals and an unwavering commitment to customer satisfaction, Travel
-                        Time invites you to embark on transformative journeys, creating indelible moments that last a
-                        lifetime. Join us in unraveling the world's wonders, one destination at a time.
-                    </p>
-                    <!-- Add more details as needed -->
-                </div>
-            </div>
+      <div class="row">
+        <div class="about-us-image">
+          <img src="./assets/img/logo.png" alt="travel time" />
         </div>
+        <div class="half-width">
+          <div class="company-info">
+            <!-- Company information, establishment, details -->
+            <h2>About Travel Time</h2>
+            <p>
+              "Travel Time, where every journey unveils a story, was founded in
+              the spirit of exploring the world and creating timeless memories."
+              <b>Ruthu M Patil</b> , the visionary behind Travel Time, once
+              remarked,
+              <i>"Travel opens the doors to endless possibilities."</i>
+              Established in 2005, Travel Time has been a beacon for wanderlust
+              enthusiasts, curating bespoke travel experiences that transcend
+              ordinary excursions. Our passion for travel is woven into every
+              itinerary we craft, ensuring that each journey is a tapestry of
+              unique adventures and cultural immersions. <br /><br />
+              As a premier travel company specializing in tours and exploration,
+              we take pride in our dedication to delivering exceptional service,
+              personalized attention, and seamless travel experiences. With a
+              team of seasoned professionals and an unwavering commitment to
+              customer satisfaction, Travel Time invites you to embark on
+              transformative journeys, creating indelible moments that last a
+              lifetime. Join us in unraveling the world's wonders, one
+              destination at a time.
+            </p>
+            <!-- Add more details as needed -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <div class="brand">
-                <img src="./assets/img/logo.png" alt="Brand Logo" style="height: 40px; width: 40px;">
-                <p>Travel Time</p>
-            </div>
-            <div>
-                <a href="#">Privacy Policy</a> <br>
-                <a href="#">Terms and conditions</a>
-            </div>
-            <div class="social-icons">
-                <a href="#"><img src="./assets/img/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="./assets/img/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="./assets/img/twitter.png" alt="Facebook"></a>
-            </div>
+      <div class="footer-content">
+        <div class="brand">
+          <img
+            src="./assets/img/logo.png"
+            alt="Brand Logo"
+            style="height: 40px; width: 40px"
+          />
+          <p>Travel Time</p>
         </div>
-        <div class="copyright">
-            <p>&copy; 2023 Travel Time. All Rights Reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> <br />
+          <a href="#">Terms and conditions</a>
         </div>
+        <div class="social-icons">
+          <a href="#"
+            ><img src="./assets/img/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"><img src="./assets/img/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="./assets/img/twitter.png" alt="Facebook" /></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Travel Time. All Rights Reserved.</p>
+      </div>
     </footer>
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -189,16 +189,15 @@ function showImage() {
     });
 }
 function showAboutUsImage() {
-    const images =document.getElementById('about-us');
-        if (isInViewport(images)) {
-            setTimeout(()=>
-            {
-                const image = images.querySelector('img');
-                image.style.width = '50%'; // Set width to 100% to scale up gradually
-            }, index * 200);
-           
-        }
-   
+    const images = document.getElementById('about-us');
+    if (isInViewport(images)) {
+        setTimeout(() => {
+            const image = images.querySelector('img');
+            image.style.width = '50%'; // Set width to 100% to scale up gradually
+        }, index * 200);
+
+    }
+
 }
 
 // Event listener for scrolling
@@ -211,21 +210,20 @@ showAboutUsImage();
 
 function navigateToNextPage(pageName) {
     let destinationPage;
-  
+
     // Determine the destination page based on the parameter
     if (pageName === 'register') {
-      destinationPage = 'register.html';
+        destinationPage = 'register.html';
     } else if (pageName === 'login') {
-      destinationPage = 'login.html';
+        destinationPage = 'login.html';
     } else if (pageName === 'home') {
-      destinationPage = 'home.html';
+        destinationPage = 'home.html';
     } else {
-      // Default to a specific page when an unknown parameter is passed
-      destinationPage = 'default.html';
+        // Default to a specific page when an unknown parameter is passed
+        destinationPage = 'default.html';
     }
-  
+
     // Navigate to the determined page
     window.location.href = destinationPage;
-  }
+}
 
-  
